@@ -8,17 +8,15 @@ import App from './App'
 import router from './router'
 {{/router}}
 {{#vuex}}  //vuex为true的时候就会写入这些
-import Vuex from 'vuex'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import store from  './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(Vuex){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
 {{#axios}}
 import Axios from 'axios'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.prototype.$axios = Axios{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Axios.defaults.baseURL='http://****'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Axios.defaults.onUploadProgress = null{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Axios.defaults.onDownloadProgress = null{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Axios.defaults.timeout = 5000{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+window.axios = Axios{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+window.axios.defaults.baseURL='http://****'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+window.axios.defaults.onUploadProgress = null{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+window.axios.defaults.onDownloadProgress = null{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+window.axios.defaults.timeout = 5000{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/axios}}
 
 window.host = ''
