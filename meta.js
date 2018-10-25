@@ -78,6 +78,10 @@ module.exports = {
       "type": "confirm",
       "message": "Install vuex?"
     },
+    axios:{
+      "type": "confirm",
+      "message": "Install axios?"
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
